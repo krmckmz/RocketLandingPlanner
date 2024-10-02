@@ -7,7 +7,7 @@ namespace RocketLandingPlanner.Business.Extensions
     {
         public static RocketLandingResponseModel CreateResponseMessage(bool result, RocketLandingResponseType responseType, RocketLandingResponseModel responseModel)
         {
-            responseModel.IsSuccess = true;
+            responseModel.IsSuccess = result;
             responseModel.Message = responseType.GetDescription();
 
             return responseModel;

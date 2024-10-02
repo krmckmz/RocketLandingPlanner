@@ -20,7 +20,7 @@ namespace RocketLandingPlanner.Business.Extensions
 
             #region Açıklamalar
             //Roket iniş isteğine cevaben dönülecek 3 adet servis cevabının enum değerlerini açıklama olarak
-            //basmak amaçlı eklenmiş bir .net extension metodudur.
+            //basmak amaçlı eklenmiş bir .Net extension metodudur.
             #endregion
         }
     }
