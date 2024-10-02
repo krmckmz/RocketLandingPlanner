@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RocketLandingPlanner.Data.Contexts;
+using RocketLandingPlanner.Data.Contexts.DB;
 using RocketLandingPlanner.Data.Repositories.Base.Abstract;
 using System.Linq.Expressions;
 
@@ -32,7 +32,6 @@ namespace RocketLandingPlanner.Data.Repositories.Base.Concrete
             return entity;
         }
 
-
         public async Task UpdateAsync(T entity)
         {
             _dbContext.Entry(entity).State = EntityState.Modified;
@@ -55,5 +54,13 @@ namespace RocketLandingPlanner.Data.Repositories.Base.Concrete
         {
             return await _dbContext.Set<T>().Where(filter).FirstOrDefaultAsync();
         }
+
+        #region Açıklamalar
+        //Temel ihtiyaç metotlarını taşıyan base repository class olarak eklenmiştir.
+        //Service katmanındaki ana sorgu buradan faydalanmaktadır.
+        //Update , delete , count , list gibi metotlar ileriye yönelik ihtiyaçlar için kullanılmak üzere eklenmiştir.
+        //Generic bir yapısı vardır , RocketLanding ile kullanılmasına rağmen ileride diğer modeller için de kullanılması amaçlanır.
+        //Library entegre edildiğinde ana proje dizinine de taşınması düşünülebilir.
+        #endregion
     }
 }

@@ -1,6 +1,5 @@
 ﻿using RocketLandingPlanner.Business.Enums;
 using RocketLandingPlanner.Business.Response_Models;
-using RocketLandingPlanner.Business.Response_Models.Base;
 
 namespace RocketLandingPlanner.Business.Extensions
 {
@@ -13,5 +12,11 @@ namespace RocketLandingPlanner.Business.Extensions
 
             return responseModel;
         }
+
+        #region Açıklamalar
+        //Roket iniş isteklerine dönülecek response model'i örmek amaçlı eklenmiş küçük bir metot'tur.
+        //Tekrarı engellemek amaçlı yapılmıştır.
+        //Class library ana projeye eklendiğinde ,uygunluğa göre orada generic yapıda benzer bir class üreterek onun içerisinde de kullanılabilir.
+        #endregion
     }
 }

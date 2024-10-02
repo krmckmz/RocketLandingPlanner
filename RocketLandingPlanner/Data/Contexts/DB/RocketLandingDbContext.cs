@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RocketLandingPlanner.Data.Entities.RocketLanding;
 
-namespace RocketLandingPlanner.Data.Contexts
+namespace RocketLandingPlanner.Data.Contexts.DB
 {
     public class RocketLandingDbContext
     {

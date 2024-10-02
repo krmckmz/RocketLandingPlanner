@@ -17,6 +17,11 @@ namespace RocketLandingPlanner.Business.Extensions
                     as DescriptionAttribute;
 
             return attribute?.Description ?? e.ToString();
+
+            #region Açıklamalar
+            //Roket iniş isteğine cevaben dönülecek 3 adet servis cevabının enum değerlerini açıklama olarak
+            //basmak amaçlı eklenmiş bir .net extension metodudur.
+            #endregion
         }
     }
 }
